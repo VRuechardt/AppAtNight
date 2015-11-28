@@ -25,5 +25,6 @@ angular.module('appAtNight', [
         // $rootScope.endpointAddr = "http://centerventure15.cdtm.de:8081/";
         // $rootScope.endpointAddr = "http://localhost/";
         $rootScope.endpointAddr = "/";
-    }]);
+    }])
+    .factory('sensors', require('./services/sensors'));
 

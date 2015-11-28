@@ -1,5 +1,9 @@
 
 node_modules
 .idea
+<<<<<<< HEAD
 app/dest
 app/app.css
+=======
+.DS_Store
+>>>>>>> af17cea00382ccbda03d232a39b37a1c748789ad
