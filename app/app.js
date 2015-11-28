@@ -5,15 +5,16 @@
 var angular = require('angular');
 require('angular-route');
 
-
 // views
 require('./views/home');
+require('./views/alarm');
 
 
 // Declare app level module which depends on views, and components
 angular.module('appAtNight', [
         'ngRoute',
-        'appAtNight.home'
+        'appAtNight.home',
+        'appAtNight.alarm'
     ])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/'});

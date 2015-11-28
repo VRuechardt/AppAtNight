@@ -1,0 +1,98 @@
+
+body {
+  background-color: $col--background-dark;
+  font-family: elegant-lux;
+  color: white;
+}
+
+
+.z-depth-0 {
+  box-shadow: none !important;
+}
+.z-depth-1{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.z-depth-1-half{
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.z-depth-2{
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.z-depth-3{
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.z-depth-4{
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+.z-depth-5{
+  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+
+.top-bar {
+  background: $col--background-darkest;
+  @extend .z-depth-3;
+}
+
+.background-darkest {
+  background: $col--background-darkest !important;
+}
+.background-darkest-text {
+  color: $col--background-darkest !important;
+}
+.background-dark {
+  background: $col--background-dark !important;
+}
+.background-dark-text {
+  color: $col--background-dark !important;
+}
+.green-light {
+  background: $col--green-light !important;
+}
+.green-light-text {
+  color: $col--green-light !important;
+}
+.green-dark {
+  background: $col--green-dark !important;
+}
+.green-dark-text {
+  color: $col--green-dark !important;
+}
+.blue-light {
+  background: $col--blue-light !important;
+}
+.blue-light-text {
+  color: $col--blue-light !important;
+}
+.blue-dark {
+  background: $col--blue-dark !important;
+}
+.blue-dark-text {
+  color: $col--blue-dark !important;
+}
+
+.navigation--button {
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+
+  div {
+
+    width: 110px;
+    text-align: center;
+
+  }
+
+  span {
+    position: absolute;
+    left: 120px;
+    top: 28px;
+    font-size: 28pt;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+}

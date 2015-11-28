@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = ['$scope', '$http', 'sensors', function($scope, $http, sensors) {
+module.exports = ['$scope', '$http', 'sensors', '$location', function($scope, $http, sensors, $location) {
 
     $scope.temperature = 'n/a';
     $scope.humidity = 'n/a';
@@ -14,6 +14,9 @@ module.exports = ['$scope', '$http', 'sensors', function($scope, $http, sensors)
         $scope.$apply();
     });
 
+    $scope.alarmPage = function() {
+        $location.url('/alarm');
+    };
 
 
 }];
