@@ -2,6 +2,7 @@
 
 module.exports = ['$scope', '$http', function($scope, $http) {
 
+    $scope.temperature = 'n/a';
     $scope.humidity = 'n/a';
 
     console.log('dummy controller running');
@@ -13,7 +14,8 @@ module.exports = ['$scope', '$http', function($scope, $http) {
 
             deviceId: "a8f076a5-6145-4d50-acda-03124994abfc",
             incomingData: function(data){
-                $scope.humidity = data.readings[1].value;
+                $scope.temperature = Math.round(data.readings[0].value);
+                $scope.humidity = Math.round(data.readings[1].value);
                 $scope.$apply();
             }
 
