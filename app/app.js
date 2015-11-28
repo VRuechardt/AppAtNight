@@ -9,8 +9,6 @@ require('angular-route');
 // views
 require('./views/home');
 
-// shared controllers & directives
-// TODO
 
 // Declare app level module which depends on views, and components
 angular.module('appAtNight', [

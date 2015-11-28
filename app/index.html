@@ -5,6 +5,21 @@
     <title>App At Night</title>
     <link rel="stylesheet" href="app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="browser-sdk/lib/relayr.js"></script>
+    <script type="text/javascript" src="browser-sdk/vendor/mqttws31.min.js"></script>
+    <script type="text/javascript">
+        var relayr = RELAYR.init({
+            appId: "bbefb11e-0986-4f89-a3d2-a217b627d5a2",
+            redirectUri:"http://localhost"
+        });
+        relayr.login({
+            success: function(token){
+                console.log(token);
+                console.log('logged in');
+                relayr.ready();
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -12,7 +27,7 @@
 
 </div>
 
-<script type="text/javascript" src="../browser-sdk/lib/relayr.js"></script>
+
 <script src="dest/app.js" charset="UTF-8"></script>
 </body>
 </html>
