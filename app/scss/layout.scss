@@ -111,6 +111,17 @@ h1 {
 
 }
 
+@media screen and (max-width: 400px) {
+  .navigation--button {
+    span.nav-title {
+      font-size: 30pt;
+    }
+    span {
+      font-size: 14pt;
+    }
+  }
+}
+
 .large-button {
   border: 1px solid $col--green-light;
   color: white;
@@ -131,8 +142,8 @@ h1 {
   div {
     margin: 10%;
     width: 80%;
-    height: 80px;
-    padding-top: 8px;
+    height: 110px;
+    padding-top: 23px;
     font-size: 28pt;
     color: white;
     border: 1px solid white;

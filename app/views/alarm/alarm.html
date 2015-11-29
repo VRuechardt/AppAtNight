@@ -1,3 +1,11 @@
+<br>
+<div class="row">
+    <div class="small-12 columns">
+        <p align="center">
+            {{napAdvisor}} <span style="font-size: 24pt;">{{napAdvisorTime}}</span> Have a good one.
+        </p>
+    </div>
+</div>
 
 <br>
 <div class="row">
@@ -17,9 +25,17 @@
 
 <br>
 <br>
-<div class="row" ng-show="!alarmRunning">
-    <div class="small-12 columns">
-        <div class="large-button" ng-click="countdown()">
+<div class="row">
+    <h1 align="center" ng-show="alarmRunning">
+        Get comfortable
+    </h1>
+    <p align="center" ng-show="alarmRunning">
+        We will start the nap as soon as you fall asleep.
+        <br>
+        Sleep probability is at {{sleepProbability}}
+    </p>
+    <div class="small-12 columns" ng-show="!alarmRunning">
+        <div class="large-button" ng-click="listenForSleep()">
             Go
         </div>
     </div>
