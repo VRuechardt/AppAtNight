@@ -82,29 +82,32 @@ h1 {
 }
 
 .navigation--button {
-  padding: 20px 0;
+  height: calc(33vh - 30px);
   width: 100%;
   position: relative;
-  border-bottom: 1px solid white;
   cursor: pointer;
+  text-align: center;
+  padding: 50px;
 
-  div {
-
-    width: 110px;
-    text-align: center;
-
+  span.nav-title {
+    font-size: 40pt;
+    color: $col--green-light;
   }
 
   span {
-    position: absolute;
-    left: 120px;
-    top: 28px;
-    font-size: 28pt;
+    font-size: 16pt;
+    color: $col--green-dark;
   }
 
-  &:last-child {
-    border-bottom: none;
+  :nth-child(2) {
+    span.nav-title {
+      color: $col--blue-light;
+    }
+    span {
+      color: $col--blue-dark;
+    }
   }
+
 
 }
 
@@ -164,6 +167,12 @@ h1 {
     float: left;
     width: 20%;
     text-align: center;
+  }
+
+  span {
+    color: white;
+    font-size: 28pt;
+    float: left;
   }
 
   input:nth-child(2) {

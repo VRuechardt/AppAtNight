@@ -1,14 +1,14 @@
 'use strict';
 
-module.exports = ['$scope', '$http', 'sensors', function($scope, $http, sensors) {
+module.exports = ['$scope', '$http', 'sensors', '$routeParams', function($scope, $http, sensors, $routeParams) {
 
     $scope.humidityLimit = 50;
     $scope.humidityReached = false;
     $scope.humidity = 0;
 
-    $scope.hours = 0;
-    $scope.minutes = 1;
-    $scope.seconds = 0;
+    $scope.hours = $routeParams.hours * 1;
+    $scope.minutes = $routeParams.minutes * 1;
+    $scope.seconds = $routeParams.seconds * 1;
 
     console.log(sensors);
     sensors.init();
@@ -61,9 +61,10 @@ module.exports = ['$scope', '$http', 'sensors', function($scope, $http, sensors)
     };
 
 
+    $scope.alarmRunning = false;
     $scope.countdown = function() {
 
-        console.log($scope.seconds);
+        $scope.alarmRunning = true;
 
         var secBackup = $scope.seconds;
 
@@ -77,6 +78,7 @@ module.exports = ['$scope', '$http', 'sensors', function($scope, $http, sensors)
             $scope.minutes = 59;
         } else {
             responsiveVoice.speak("Had a nice nap? Wake up now. Wake up. Now! Im serious. We have three degree celsius outside.", "Australian Female");
+            $scope.alarmRunning = false;
         }
 
         if($scope.hours == 0 && $scope.minutes == 0 && $scope.seconds == 1) {
