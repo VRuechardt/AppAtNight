@@ -209,7 +209,7 @@ module.exports = ['$scope', '$http', 'sensors', '$location', function($scope, $h
 
     $scope.pressureData = [];
     $scope.pressure = function() {
-        $http.get('http://localhost/json/pressure.php')
+        $http.get('http://141.84.221.173/json/pressure.php')
             .then(function(response) {
                 $scope.pressureData = response.data;
                 $scope.pressureAnalyzer(response.data);
