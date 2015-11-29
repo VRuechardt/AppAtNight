@@ -21,6 +21,7 @@ module.exports = ['$scope', '$http', 'sensors', function($scope, $http, sensors)
 
     $scope.light = function() {
 
+        responsiveVoice.speak("Had a nice nap? Wake up now. Wake up. Now! Im serious. We have three degree celsius outside.", "Australian Female");
         $scope.animate([
             'white', 'blink', 'blink', 'red', 'blink', 'blink'
         ]);

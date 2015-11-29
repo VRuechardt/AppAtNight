@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="libs/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/js/swiper.jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/css/swiper.min.css">
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
 </head>
 <body>
@@ -28,24 +29,22 @@
 
 
 
-<script src="dest/app.js" charset="UTF-8"></script>
 <script type="text/javascript">
     var relayr = {};
-    window.onload = function() {
-        relayr = RELAYR.init({
-            appId: "bbefb11e-0986-4f89-a3d2-a217b627d5a2",
-            redirectUri:"http://localhost"
-        });
-        relayr.login({
-            success: function(token){
-                console.log('token');
-                console.log(token);
-                console.log('logged in');
-                relayr.ready();
-            }
-        });
-    };
+    relayr = RELAYR.init({
+        appId: "59a1a6f2-f3e6-4d34-a74a-11e95c3f2fbb",
+        redirectUri:"http://141.84.221.173"
+    });
+    relayr.login({
+        success: function(token){
+            console.log('token');
+            console.log(token);
+            console.log('logged in');
+            relayr.ready();
+        }
+    });
 
 </script>
+<script src="dest/app.js" charset="UTF-8"></script>
 </body>
 </html>
