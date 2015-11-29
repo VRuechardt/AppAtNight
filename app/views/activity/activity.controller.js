@@ -10,7 +10,8 @@ module.exports = ['$scope', '$http', 'sensors', '$location', function($scope, $h
 
     $('#chartContainer').highcharts({
         chart: {
-            backgroundColor: 'rgba(0, 0, 0, 0)'
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            type: 'spline'
         },
         title: {
             text: '',
@@ -20,19 +21,26 @@ module.exports = ['$scope', '$http', 'sensors', '$location', function($scope, $h
             categories: data
         },
         yAxis: {
+            gridLineWidth: 0,
+            minorGridLineWidth: 0,
+            labels: {
+                enabled: false
+            },
             title: {
                 text: ''
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: 'rgba(122, 122, 122, 0.3)'
-            }]
+            }
         },
         tooltip: {
         },
         legend: {
             enabled: false
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                  enabled: false
+                }
+            }
         },
         series: [{
             name: 'Quality of Sleep',
@@ -161,6 +169,7 @@ module.exports = ['$scope', '$http', 'sensors', '$location', function($scope, $h
             $('#chartContainer').highcharts({
                 chart: {
                     backgroundColor: 'rgba(0, 0, 0, 0)',
+                    type: 'spline',
                     animation: false
                 },
                 title: {
@@ -171,19 +180,26 @@ module.exports = ['$scope', '$http', 'sensors', '$location', function($scope, $h
                     categories: data
                 },
                 yAxis: {
+                    gridLineWidth: 0,
+                    minorGridLineWidth: 0,
+                    labels: {
+                        enabled: false
+                    },
                     title: {
                         text: ''
-                    },
-                    plotLines: [{
-                        value: 0,
-                        width: 1,
-                        color: 'rgba(122, 122, 122, 0.3)'
-                    }]
+                    }
                 },
                 tooltip: {
                 },
                 legend: {
                     enabled: false
+                },
+                plotOptions: {
+                    spline: {
+                        marker: {
+                          enabled: false
+                        }
+                    }
                 },
                 series: [{
                     name: 'Movement',
