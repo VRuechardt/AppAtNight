@@ -5,6 +5,11 @@ body {
   color: white;
 }
 
+h1 {
+  color: white;
+  font-family: elegant-lux;
+}
+
 
 .z-depth-0 {
   box-shadow: none !important;
@@ -31,6 +36,12 @@ body {
 .top-bar {
   background: $col--background-darkest;
   @extend .z-depth-3;
+  .row {
+    .columns {
+      font-size: 24pt;
+      text-align: center;
+    }
+  }
 }
 
 .background-darkest {
@@ -95,4 +106,49 @@ body {
     border-bottom: none;
   }
 
+}
+
+.large-button {
+  border: 1px solid $col--green-light;
+  color: white;
+  padding: 50px 30px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 28pt;
+
+
+
+}
+
+.weight-sensor {
+
+  text-align: center;
+
+
+  div {
+    margin: 10%;
+    width: 80%;
+    height: 80px;
+    padding-top: 8px;
+    font-size: 28pt;
+    color: white;
+    border: 1px solid white;
+  }
+
+  &:hover div {
+    background-color: $col--blue-dark;
+  }
+
+}
+
+.sleep-graph {
+  h1 {
+    text-align: center;
+    font-size: 28pt;
+    font-weight: normal;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
 }

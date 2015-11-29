@@ -67,8 +67,12 @@ module.exports = ['$http', function($http) {
 
             if(!sensorService.initialized) {
                 sensorService.initialized = true;
+                console.log('initiated');
 
                 relayr.ready = function() {
+
+                    console.log('connected: ');
+                    console.log(sensorService);
 
                     sensorService.connected = true;
                     sensorService.devices.forEach(function(device, d_i) {
