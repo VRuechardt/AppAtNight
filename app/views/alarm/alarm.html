@@ -1,18 +1,23 @@
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1>
-    {{humidity}}
-</h1>
+<div class="row">
+    <div class="small-12 columns">
+        <div class="alarm--settime">
+            <h1 align="center">
+                Set a new alarm
+            </h1>
+            <input type="number" placeholder="hh" min="0" max="3" ng-model="hours">
+            <input type="number" placeholder="mm" min="0" max="60" ng-model="minutes">
+            <input type="number" placeholder="ss" min="0" max="60" ng-model="seconds">
+        </div>
+    </div>
+</div>
+
 <br>
 <br>
 <div class="row">
     <div class="small-12 columns">
-        <div class="large-button" ng-click="light()">
+        <div class="large-button" ng-click="countdown()">
             Go
         </div>
     </div>

@@ -6,6 +6,10 @@ module.exports = ['$scope', '$http', 'sensors', function($scope, $http, sensors)
     $scope.humidityReached = false;
     $scope.humidity = 0;
 
+    $scope.hours = 0;
+    $scope.minutes = 1;
+    $scope.seconds = 0;
+
     console.log(sensors);
     sensors.init();
     sensors.listen('humidity', function(data) {
@@ -54,6 +58,41 @@ module.exports = ['$scope', '$http', 'sensors', function($scope, $http, sensors)
             }
 
         });
+    };
+
+
+    $scope.countdown = function() {
+
+        console.log($scope.seconds);
+
+        var secBackup = $scope.seconds;
+
+        if($scope.seconds > 0) {
+            $scope.seconds--;
+        } else if($scope.minutes > 0) {
+            $scope.minutes--;
+            $scope.seconds = 59;
+        } else if($scope.hours > 0) {
+            $scope.hours--;
+            $scope.minutes = 59;
+        } else {
+            responsiveVoice.speak("Had a nice nap? Wake up now. Wake up. Now! Im serious. We have three degree celsius outside.", "Australian Female");
+        }
+
+        if($scope.hours == 0 && $scope.minutes == 0 && $scope.seconds == 1) {
+            $scope.animate([
+                'white', 'blink', 'blink', 'red', 'blink', 'blink'
+            ]);
+        }
+
+        if(!$scope.$$phase) {
+            $scope.$apply();
+        }
+
+        if($scope.hours > 0 || $scope.minutes > 0 || secBackup > 0) {
+            window.setTimeout($scope.countdown, 1000);
+        }
+
     };
 
 }];

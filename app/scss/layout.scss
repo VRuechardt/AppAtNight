@@ -152,3 +152,22 @@ h1 {
 .swiper-pagination-bullet-active {
   background: white !important;
 }
+
+.alarm--settime {
+
+  input {
+    background: rgba(0, 0, 0, 0) !important;
+    font-size: 28pt;
+    border: none;
+    color: white;
+    height: 60px;
+    float: left;
+    width: 20%;
+    text-align: center;
+  }
+
+  input:nth-child(2) {
+    margin-left: 20%;
+  }
+
+}
